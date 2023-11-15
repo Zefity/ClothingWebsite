@@ -33,8 +33,6 @@ class Tag(models.Model):
 
 class Post(models.Model):
     author = models.ForeignKey(User, related_name="posts", on_delete=models.CASCADE)
-    hor = models.ForeignKey(User, related_name="posts", on_delete=models.CASCADE)
-    r = models.ForeignKey(User, related_name="posts", on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='articles/')
     text = models.TextField()
